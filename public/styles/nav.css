@@ -1,0 +1,18 @@
+.bar {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120px;
+  width: 100vw;
+  z-index: 1000;
+  padding: 1.5em;
+}
+
+#logo {
+  font-family: 'Bungee', cursive;
+}
