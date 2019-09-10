@@ -1,0 +1,29 @@
+form {
+  position: relative;
+  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form textarea {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-weight: bold;
+  flex: 100%;
+  margin-bottom: 12px;
+  height: 50px;
+  border: none;
+  border-bottom: 4px solid #545149; 
+}
+
+section form input {
+  color: #f4f1ec; 
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;   
+}
+
+section form span {
+  font-weight: bold;
+  font-family: 'Bungee', cursive;
+}

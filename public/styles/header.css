@@ -1,6 +1,7 @@
 header {
   background-color: #fa8a00;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  width: 100%;
   height: 400px;
   position: absolute;
   top: 120px;
