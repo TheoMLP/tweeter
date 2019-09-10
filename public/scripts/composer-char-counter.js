@@ -1,7 +1,16 @@
 $(document).ready(function() {
-  $("#textBar").on('keypress', function() {
-    $(this).nextAll('.counter').text(String(140 - $(this).val().length))
-  })
+
+  $("#textBar").on('input', function() {
+    const maxCount = 140
+    let inputLength = $(this).val().length
+    $(this).nextAll('.counter').text(maxCount - inputLength)
+    if (inputLength > 140) {
+      $(this).nextAll('.counter').css("color", "red");
+    } else {
+      $(this).nextAll('.counter').css("color", "black");
+    }
+  });
+
 });
 
 
