@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
@@ -21,6 +21,8 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -47,8 +49,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">  
       <section class="new-tweet">
-          <form class="tweetForm" action="/tweets/" method="POST">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <form id="form" action="/tweets/" method="POST">
+            <textarea id="textBar" name="text" placeholder="What are you humming about?"></textarea>
             <input type="submit" value="Tweet">
             <span class="counter">140</span>
           </form>
