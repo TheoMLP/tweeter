@@ -60,18 +60,30 @@ const createTweetElement = function(tweetData) {
 }
 
 // Ajax post request when posting a new tweet
-const ajaxPostRequest = (url, method, data) => {
-  console.log('Starting ajax call')
-  $.ajax({url, method, data})
-    .then(response => {
-      console.log('worked')
-    })
-    .fail(err => {
-      console.log(err)
-    })
-    .always(() => {
-      console.log('Completed')
-    });
+const formValidation = (data) => {
+  let errorMsg;
+  if (!data) {
+    errorMsg = "Cannot submit empty tweet"
+  }
+  if (data.length > 140) {
+    errorMsg = "Cannot submit tweet over 140 characters"
+  }
+  return errorMsg
+}
+
+const submitForm = (url, method, text) => {
+  const errorMsg = formValidation(text)
+  if (errorMsg) {
+    alert(errorMsg)
+  } else {
+    $.ajax({url, method, data: { text } })
+      .then(response => {
+        console.log('worked')
+      })
+      .fail(err => {
+        console.log(err)
+      })
+    }
 }
 
 const loadTweets = (url, method) => {
@@ -88,8 +100,8 @@ const loadTweets = (url, method) => {
 $(() => {
   $('#form').on('submit', function(event) {
     event.preventDefault();
-    tweet = $(this).serialize();
-    ajaxPostRequest('/tweets', 'POST', tweet);
+    let tweet = $('#form textarea').val();
+    submitForm('/tweets', 'POST', tweet);
   })
 
   loadTweets("/tweets", "GET")
