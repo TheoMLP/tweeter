@@ -13,6 +13,37 @@
   padding: 1.5em;
 }
 
+.bar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 63px;
+}
+
+.bar div button {
+  border: none;
+  background-color: #4056A1;
+  animation: float 2s ease-in-out infinite;
+  outline: none;
+}
+
+.bar div button:hover {
+  animation: float 1s ease-in-out infinite;
+}
+
 #logo {
   font-family: 'Bungee', cursive;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(8px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

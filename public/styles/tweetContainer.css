@@ -61,3 +61,7 @@ article.tweet:hover {
 article.tweet:hover .username {
   color: #B0C4DE;
 }
+
+#tweetSection {
+  margin-top: 1em;
+}

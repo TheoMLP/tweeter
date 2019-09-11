@@ -15,6 +15,7 @@ form textarea {
   height: 50px;
   border: none;
   border-bottom: 4px solid #545149; 
+  outline: none;
 }
 
 section form input {
