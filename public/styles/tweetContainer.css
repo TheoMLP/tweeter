@@ -38,6 +38,16 @@ article footer {
   padding-right: 0.8em; 
 }
 
+.tweet header div {
+  display: flex; 
+  align-items: center;
+  padding: 0em;
+}
+
+.tweet header div img {
+  margin-right: 0.5em;
+}
+
 .interaction {
   color: darkblue;
 }
