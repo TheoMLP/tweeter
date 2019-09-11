@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
 const data = [
   {
     "user": {
@@ -30,34 +29,64 @@ const data = [
   }
 ]
 
+//loops through the database and extract each object to fill the tweets info
+
 const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet)
     $(".container").append($tweet)
   }
 }
 
+//creating each tweet using the info from the database
+
 const createTweetElement = function(tweetData) {
-  let $tweet = $('<article>').addClass('tweet')
-  .append($("<header>")
-     .append($("<div>")
-        .append(`<img src="${tweetData["user"]["avatars"]}">`)
-        .append(`<p>${tweetData["user"]["name"]}</p>`))
-     .append($(`<p>${tweetData["user"]["handle"]}</p>`).addClass('username')))
+  //create tweet article
+  let $tweet = $('<article>').addClass('tweet');
 
-  .append($("<div>")
-       .append(`<p>${tweetData["content"]["text"]}</p>`))
+  //creates header, append div containing avatar & username and appends handler
+  let $header = $("<header>");
 
-  .append($("<footer>")
-     .append(`<p>${new Date(tweetData["created_at"]).toDateString()}</p>`)
-     .append($("<p>like</p>").addClass('interaction')))
-  return $tweet
+  let $headerDiv = $("<div>");
+  $('<img>')
+    .attr('src', tweetData["user"]["avatars"])
+    .appendTo($headerDiv);
+  $('<p>')
+    .text(tweetData["user"]["name"])
+    .appendTo($headerDiv);
+  $header.append($headerDiv);
+  
+  $('<p>')
+    .addClass('username')
+    .text(tweetData["user"]["handle"])
+    .appendTo($header)
+
+  //append header to tweet article
+  $tweet.append($header);
+
+  //creates and appends content div and main text
+  let $content = $("<div>");
+  $('<p>')
+    .text(tweetData["content"]["text"])
+    .appendTo($content);
+  $tweet.append($content);
+
+  //creates footer appended to the tweet article
+  let $footer = $("<footer>");
+  $('<p>')
+    .text(new Date(tweetData["created_at"]).toDateString())
+    .appendTo($footer);
+  $('<p>')
+    .text('like')
+    .addClass('interaction')
+    .appendTo($footer);
+  $tweet.append($footer);
+
+  return $tweet;
 }
 
-$(document).ready(function() {
+//shorthand of document ready method
+$(() => {
   renderTweets(data)
 });
 

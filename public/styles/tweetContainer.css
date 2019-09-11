@@ -41,11 +41,9 @@ article footer {
 .tweet header div {
   display: flex; 
   align-items: center;
+  justify-content: space-between;
+  width: 155px;
   padding: 0em;
-}
-
-.tweet header div img {
-  margin-right: 0.5em;
 }
 
 .interaction {
