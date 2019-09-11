@@ -44,9 +44,8 @@ const createTweetElement = function(tweetData) {
   //create tweet article
   let $tweet = $('<article>').addClass('tweet');
 
-  //creates header, append div containing avatar & username and appends handler
+  //creates and appends header, containing div (avatar & username) and handler
   let $header = $("<header>");
-
   let $headerDiv = $("<div>");
   $('<img>')
     .attr('src', tweetData["user"]["avatars"])
@@ -55,7 +54,7 @@ const createTweetElement = function(tweetData) {
     .text(tweetData["user"]["name"])
     .appendTo($headerDiv);
   $header.append($headerDiv);
-  
+
   $('<p>')
     .addClass('username')
     .text(tweetData["user"]["handle"])
@@ -85,8 +84,29 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 }
 
+ajaxPostRequest = (url, method, data) => {
+  console.log('Starting ajax call')
+  $.ajax({url, method, data})
+    .then(response => {
+      console.log('worked')
+    })
+    .fail(err => {
+      console.log(err)
+    })
+    .always(() => {
+      console.log('Completed')
+    });
+}
+
+
 //shorthand of document ready method
 $(() => {
-  renderTweets(data)
+  renderTweets(data);
+
+  $('#form').on('submit', function(event) {
+    event.preventDefault();
+    tweet = $(this).serialize();
+    ajaxPostRequest('/tweets', 'POST', tweet);
+  })
 });
 
