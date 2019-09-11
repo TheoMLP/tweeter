@@ -1,0 +1,47 @@
+.tweet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 4px solid;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em; 
+}
+
+article header {
+  color: #545149;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.8em;
+  padding-right: 0.8em; 
+}
+
+article div {
+  color: black;
+  display: flex;
+  justify-content: flex-start; 
+  padding-left: 0.8em;
+  padding-right: 0.8em; 
+}
+
+article footer {
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-top: 4px solid #545149;
+  padding-left: 0.8em;
+  padding-right: 0.8em; 
+}
+
+.interaction {
+  color: darkblue;
+}
+
+.username {
+  color: #f4f1ec;
+}
