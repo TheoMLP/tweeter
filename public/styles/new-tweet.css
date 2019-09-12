@@ -27,6 +27,7 @@ section form input {
 
 section form input:hover {
   box-shadow: 4px 4px 1px lightsteelblue;
+  cursor: pointer;
 }
 
 section form span {

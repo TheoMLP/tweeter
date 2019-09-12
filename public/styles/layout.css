@@ -32,3 +32,44 @@ body {
   width: 90%;
   margin: auto;
 }
+
+#downBtn {
+  background-color: #DC143C;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 70%;
+  outline: none;
+  animation: float 2s ease-in-out infinite; 
+}
+
+#downBtn img {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+#downBtn:hover img {
+  animation: float 0.3s ease-in-out;
+}
+
+#downBtn:hover {
+  box-shadow: 5px 5px 3px rgb(106, 135, 174);
+  cursor: pointer;
+}
+
+@keyframes float {
+	0% {
+    transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(2px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
