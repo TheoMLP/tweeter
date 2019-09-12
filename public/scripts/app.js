@@ -4,8 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//loops through the database and extract each object to fill the tweets info
-
+//loops through the database and extract each object to fill the tweets infoxs
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet)
@@ -71,21 +70,18 @@ const formValidation = (data) => {
   return errorMsg
 }
 
+//submit an ajax request to add the tweet to the db async
 const submitForm = (url, method, tweet) => {
-  const errorMsg = formValidation(tweet)
-  if (errorMsg) {
-    alert(errorMsg)
-  } else {
-    $.ajax({url, method, data: { text: tweet } })
-      .then(() => {
-        loadLastTweet('/tweets');
-      })
-      .fail(err => {
-        console.log(err)
-      })
-    }
+  $.ajax({url, method, data: { text: tweet } })
+    .then(() => {
+      loadLastTweet('/tweets');
+    })
+    .fail(err => {
+      console.log(err)
+    })
 }
 
+//loads all the tweet async onto the page
 const loadTweets = url => {
   $.ajax({url, method: 'GET'})
     .then(tweets => {
@@ -96,6 +92,7 @@ const loadTweets = url => {
     })
 }
 
+//loads the newly submitted tweet onto the page
 const loadLastTweet = url => {
   $.ajax({url, method: 'GET'})
     .then(tweets => {
@@ -106,12 +103,27 @@ const loadLastTweet = url => {
     })
 }
 
-//shorthand of document ready method
 $(() => {
+  //hides the initial error message
+  $('.error').hide()
+
   $('#form').on('submit', function(event) {
     event.preventDefault();
     let tweet = $('#form textarea').val();
-    submitForm('/tweets', 'POST', tweet);
+
+    const errorMsg = formValidation(tweet)
+    //if there is an error toggles down the error message
+    if (errorMsg) {
+      $('.error').slideDown().text(errorMsg)
+
+      //clicking anywhere on the body will toggle the errorMsg back up 
+      $('body').on('click', function() {
+        $('.error').slideUp()
+        $('textarea').focus()
+      })
+    } else {
+      submitForm('/tweets', 'POST', tweet);
+    }
   })
 
   loadTweets("/tweets")
