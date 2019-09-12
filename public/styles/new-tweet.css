@@ -27,8 +27,10 @@ section form input {
 
 section form input:hover {
   box-shadow: 4px 4px 1px lightsteelblue;
+  color: lightcoral;
   cursor: pointer;
 }
+
 
 section form span {
   font-weight: bold;

@@ -49,10 +49,19 @@ const createTweetElement = function(tweetData) {
   $('<p>')
     .text(new Date(tweetData["created_at"]).toDateString())
     .appendTo($footer);
-  $('<p>')
-    .text('like')
-    .addClass('interaction')
-    .appendTo($footer);
+
+  let $footerDiv = $('<div>');
+  $('<img>')
+    .attr('src', '../images/flag.png')
+    .appendTo($footerDiv)
+  $('<img>')
+    .attr('src', '../images/exchange.png')
+    .appendTo($footerDiv)
+  $('<img>')
+    .attr('src', '../images/heart.png')
+    .appendTo($footerDiv)
+  
+  $footer.append($footerDiv)
   $tweet.append($footer);
 
   return $tweet;

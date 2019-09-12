@@ -15,18 +15,18 @@ $(document).ready(function() {
   //when the user scroll past 450px it displays the second toggle button
   $(window).scroll(function() {
     if ($(window).scrollTop() > 450) {
-      $('#downBtn').fadeIn('100');
-      $('#navBtn').fadeOut('100');
+      $('#downBtn').fadeIn('50');
+      $('#navBtn').fadeOut('50');
     } else {
-      $('#downBtn').fadeOut('100');
-      $('#navBtn').fadeIn('100');
+      $('#downBtn').fadeOut('50');
+      $('#navBtn').fadeIn('50');
     }
   });
 
   //when clicking on the second toggle button it brings back to the top of the page 
   //also focuses on the textarea
   $('#downBtn').on('click', function() {
-    $('body, html').animate({scrollTop: 0}, '300');
+    $('body, html').animate({scrollTop: 0}, '250');
     $('#form').slideDown();
     $('textarea').focus();
   })

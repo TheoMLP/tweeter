@@ -28,8 +28,8 @@
   outline: none;
 }
 
-.bar div button:hover {
-  animation: float 1s ease-in-out infinite;
+.bar div button img:hover {
+  animation: float 0.4s linear;
   cursor: pointer;
 }
 

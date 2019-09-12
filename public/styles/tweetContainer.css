@@ -46,6 +46,17 @@ article footer {
   padding: 0em;
 }
 
+.tweet footer div {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  align-items: center;
+}
+
+.tweet footer div img:hover {
+  animation: float 0.2s linear;
+} 
+
 .interaction {
   color: darkblue;
 }
