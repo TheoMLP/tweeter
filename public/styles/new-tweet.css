@@ -1,6 +1,7 @@
 form {
   position: relative;
   padding: 1.5em;
+  padding-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

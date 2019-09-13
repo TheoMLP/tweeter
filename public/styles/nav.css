@@ -34,7 +34,16 @@
 }
 
 #logo {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Bungee', cursive;
+}
+
+#logo img {
+  height: 70px;
+  width: 70px;
 }
 
 @keyframes float {
@@ -47,4 +56,12 @@
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+.bar .eyes {
+  position: absolute;
+  background-color: #7c655b;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
 }

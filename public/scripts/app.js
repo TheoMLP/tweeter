@@ -115,10 +115,14 @@ const loadLastTweet = url => {
 $(() => {
   //hides the initial error message
   $('.error').hide()
+  $('.eyes').hide()
 
   $('#form').on('submit', function(event) {
     event.preventDefault();
     let tweet = $('#form textarea').val();
+
+    $('.eyes').slideDown(250)
+    $('.eyes').slideUp(250)
 
     const errorMsg = formValidation(tweet)
     //if there is an error toggles down the error message

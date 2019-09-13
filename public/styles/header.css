@@ -1,16 +1,17 @@
 #header {
-  background-color: #fa8a00;
+  background-color: rgb(242, 122, 75);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  top: 120px;
-  right: 0; 
-  left: 0; 
   text-align: center;
 }
 
-header h2 {
+#header h2 {
+  margin: 0;
   position: relative; 
   bottom: 30px;
+}
+
+#header img {
+  height: 200px;
+  width: 200px;
+  animation: float 2s ease-in-out infinite;
 }

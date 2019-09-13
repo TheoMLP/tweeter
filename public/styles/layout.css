@@ -26,12 +26,14 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
+ body {
+   margin-top: 120px;
+ }
+ 
+ /* .container {
   position: relative;
-  top: 520px;
-  width: 90%;
   margin: auto;
-}
+} */
 
 #downBtn {
   background-color: #DC143C;
@@ -60,6 +62,29 @@ body {
 #downBtn:hover {
   box-shadow: 5px 5px 3px rgb(106, 135, 174);
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 60%;
+  }
+  #header {
+    width: 30%;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+
+  #somediv {
+    display: flex; 
+    flex-direction: column;
+    margin-top: 1em;
+  }
 }
 
 @keyframes float {
