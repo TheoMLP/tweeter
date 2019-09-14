@@ -14,11 +14,13 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["Owl and button animation when submitting a new tweet"]()
+!["Owl blinking and button animation when submitting a new tweet"](https://github.com/TheoMLP/tweeter/blob/master/docs/Owl-Blinking-on-submit.webm)
 
-!["Main page display when on mobile or tablet"]()
+!["Main page computer display"](https://github.com/TheoMLP/tweeter/blob/master/docs/computerDisplay.png)
 
-!["Scroll back to the top animation"]()
+!["Main page mobile / tablet display"](https://github.com/TheoMLP/tweeter/blob/master/docs/mobileDisplay.png)
+
+!["Scroll back up functionality and animation"](https://github.com/TheoMLP/tweeter/blob/master/docs/Scroll-Back-Up-Functionality.webm)
 
 ## Getting Started
 
