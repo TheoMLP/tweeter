@@ -15,6 +15,7 @@ article header {
   color: #545149;
   display: flex;
   justify-content: space-between;
+  height: 79px;
   padding-left: 0.8em;
   padding-right: 0.8em; 
 }
@@ -41,9 +42,12 @@ article footer {
 .tweet header div {
   display: flex; 
   align-items: center;
-  justify-content: space-between;
-  width: 155px;
+  justify-content: flex-start;
+  width: 250px;
   padding: 0em;
+}
+.tweet header img {
+  margin-right: 10px;
 }
 
 footer div {

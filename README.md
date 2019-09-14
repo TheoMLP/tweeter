@@ -2,7 +2,21 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Features 
+
+- Write and submit new tweets to the feed;
+- See the username, info and data of other users' tweets
+- 'Write a tweet' animation to display the tweet submit form
+- 'Scroll back to the top button' allowing you to go to the top of the feed
+- Animated owl that blinks everytime you submit a new tweet
+
+## Final Product
+
+!["Owl and button animation when submitting a new tweet"]()
+
+!["Main page display when on mobile or tablet"]()
+
+!["Scroll back to the top animation"]()
 
 ## Getting Started
 
@@ -10,8 +24,11 @@ This repository is the starter code for the project: Students will fork and clon
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+5. Important! Look at the owl when submitting a new tweet
+6. Enjoy the full features of the website (Look at other user's tweet and start tweeting)
 
 ## Dependencies
 
 - Express
+- Chance
 - Node 5.10.x or above
