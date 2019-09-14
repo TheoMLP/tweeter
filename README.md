@@ -4,6 +4,8 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Features 
 
+### Look out for the blinking owl when submitting a new tweet 
+
 - Write and submit new tweets to the feed;
 - See the username, info and data of other users' tweets
 - 'Write a tweet' animation to display the tweet submit form
