@@ -5,13 +5,13 @@
 }
 
 #header h2 {
-  margin: 0;
   position: relative; 
   bottom: 30px;
+  margin: 0;
 }
 
 #header img {
   height: 200px;
   width: 200px;
-  animation: float 2s ease-in-out infinite;
+  animation: float 2.5s ease-in-out infinite;
 }

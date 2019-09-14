@@ -22,28 +22,36 @@
 }
 
 .bar div button {
-  border: none;
   background-color: #4056A1;
-  animation: float 2s ease-in-out infinite;
+  border: none;
   outline: none;
+  animation: float 2s ease-in-out infinite;
 }
 
-.bar div button img:hover {
-  animation: float 0.4s linear;
+.bar div button:hover img {
   cursor: pointer;
+  animation: float 0.4s linear;
 }
 
 #logo {
-  width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
+  width: 200px;
 }
 
 #logo img {
   height: 70px;
   width: 70px;
+}
+
+.bar .eyes {
+  position: absolute;
+  background-color: #7c655b;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes float {
@@ -56,12 +64,4 @@
 	100% {
 		transform: translatey(0px);
 	}
-}
-
-.bar .eyes {
-  position: absolute;
-  background-color: #7c655b;
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
 }

@@ -50,6 +50,11 @@ body {
   animation: float 2s ease-in-out infinite; 
 }
 
+#downBtn:hover {
+  box-shadow: 5px 5px 3px rgb(106, 135, 174);
+  cursor: pointer;
+}
+
 #downBtn img {
   height: 1.2em;
   width: 1.2em;
@@ -57,11 +62,6 @@ body {
 
 #downBtn:hover img {
   animation: float 0.3s ease-in-out;
-}
-
-#downBtn:hover {
-  box-shadow: 5px 5px 3px rgb(106, 135, 174);
-  cursor: pointer;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -74,6 +74,7 @@ body {
   .container {
     width: 60%;
   }
+
   #header {
     width: 30%;
     margin-top: 2em;
@@ -85,16 +86,4 @@ body {
     flex-direction: column;
     margin-top: 1em;
   }
-}
-
-@keyframes float {
-	0% {
-    transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(2px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
 }
