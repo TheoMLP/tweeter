@@ -138,6 +138,8 @@ $(() => {
       });
     } else {
       submitForm('/tweets', 'POST', tweet);
+      $("#textBar").val('')
+      $(".counter").text('140')
     }
   });
 
